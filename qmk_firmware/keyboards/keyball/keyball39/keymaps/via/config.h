@@ -35,5 +35,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define TAP_CODE_DELAY 5
 
-#define POINTING_DEVICE_AUTO_MOUSE_ENABLE
-#define AUTO_MOUSE_DEFAULT_LAYER 1
+//#define POINTING_DEVICE_AUTO_MOUSE_ENABLE
+//#define AUTO_MOUSE_DEFAULT_LAYER 1
+
+// Configure the global tapping term (default: 200ms)
+#define TAPPING_TERM 200
+// Allow tapping term per keys
+#define TAPPING_TERM_PER_KEY
+// Define double tap auto repeat
+#define QUICK_TAP_TERM 120
+// Allow preffered hold per key
+#define HOLD_ON_OTHER_KEY_PRESS_PER_KEY

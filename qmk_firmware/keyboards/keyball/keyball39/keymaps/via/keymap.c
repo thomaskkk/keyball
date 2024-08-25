@@ -24,39 +24,77 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // keymap for default (VIA)
   [0] = LAYOUT_universal(
-    KC_Q     , KC_W     , KC_E     , KC_R     , KC_T     ,                            KC_Y     , KC_U     , KC_I     , KC_O     , KC_P     ,
-    KC_A     , KC_S     , KC_D     , KC_F     , KC_G     ,                            KC_H     , KC_J     , KC_K     , KC_L     , KC_MINS  ,
-    KC_Z     , KC_X     , KC_C     , KC_V     , KC_B     ,                            KC_N     , KC_M     , KC_COMM  , KC_DOT   , KC_SLSH  ,
-    KC_LCTL  , KC_LGUI  , KC_LALT  ,LSFT_T(KC_LNG2),LT(1,KC_SPC),LT(3,KC_LNG1),KC_BSPC,LT(2,KC_ENT),LSFT_T(KC_LNG2),KC_RALT,KC_RGUI, KC_RSFT
+    KC_Q     , KC_W     , KC_F     , KC_P     , KC_G     ,                            KC_J     , KC_L     , KC_U     , KC_Y     , KC_SCLN  ,
+    LGUI_T(KC_A),LALT_T(KC_R),LCTL_T(KC_S),LSFT_T(KC_T),KC_D,                      KC_H,RSFT_T(KC_N),RCTL_T(KC_E),LALT_T(KC_I),RGUI_T(KC_O),
+    KC_Z     , KC_X     , KC_C     , KC_V     , KC_B     ,                            KC_K     , KC_M     , KC_COMM  , KC_DOT   , KC_SLSH  ,
+    KC_ESC,KC_BTN3,KC_BTN2,KC_BTN1,LT(1,KC_TAB),LSFT_T(KC_SPC),           RSFT_T(KC_BSPC),LT(2,KC_ENT),KC_TRNS,KC_TRNS,KC_TRNS,LT(3,KC_DEL)
   ),
 
   [1] = LAYOUT_universal(
-    KC_F1    , KC_F2    , KC_F3    , KC_F4    , KC_RBRC  ,                            KC_F6    , KC_F7    , KC_F8    , KC_F9    , KC_F10   ,
-    KC_F5    , KC_EXLM  , S(KC_6)  ,S(KC_INT3), S(KC_8)  ,                           S(KC_INT1), KC_BTN1  , KC_PGUP  , KC_BTN2  , KC_SCLN  ,
-    S(KC_EQL),S(KC_LBRC),S(KC_7)   , S(KC_2)  ,S(KC_RBRC),                            KC_LBRC  , KC_DLR   , KC_PGDN  , KC_BTN3  , KC_F11   ,
-    KC_INT1  , KC_EQL   , S(KC_3)  , _______  , _______  , _______  ,      TO(2)    , TO(0)    , _______  , KC_RALT  , KC_RGUI  , KC_F12
+    C(G(KC_LEFT)),C(S(KC_TAB)),KC_UP,C(KC_TAB),C(G(KC_RGHT)),                         KC_PLUS  , KC_7     , KC_8     , KC_9     , KC_ASTR  ,
+    KC_HOME   , KC_LEFT , KC_DOWN  , KC_RGHT  , KC_PGUP  ,                            KC_MINS  , KC_4     , KC_5     , KC_6     , KC_SLSH  ,
+    KC_END    , KC_PSCR , KC_CALC  ,  KC_INS  , KC_PGDN  ,                            KC_DOT   , KC_1     , KC_2     , KC_3     , KC_ENT   ,
+    KC_TRNS   , KC_TRNS , KC_TRNS  , KC_TRNS  , KC_TRNS  , KC_TRNS  ,      KC_TRNS  , KC_0     , KC_TRNS  , KC_TRNS  , KC_TRNS  , KC_TRNS
   ),
 
   [2] = LAYOUT_universal(
-    KC_TAB   , KC_7     , KC_8     , KC_9     , KC_MINS  ,                            KC_NUHS  , _______  , KC_BTN3  , _______  , KC_BSPC  ,
-   S(KC_QUOT), KC_4     , KC_5     , KC_6     ,S(KC_SCLN),                            S(KC_9)  , KC_BTN1  , KC_UP    , KC_BTN2  , KC_QUOT  ,
-    KC_SLSH  , KC_1     , KC_2     , KC_3     ,S(KC_MINS),                           S(KC_NUHS), KC_LEFT  , KC_DOWN  , KC_RGHT  , _______  ,
-    KC_ESC   , KC_0     , KC_DOT   , KC_DEL   , KC_ENT   , KC_BSPC  ,      _______  , _______  , _______  , _______  , _______  , _______
+    KC_EXLM   , KC_AT   , KC_HASH  , KC_DLR   , KC_PERC  ,                            KC_CIRC  , KC_AMPR  , KC_ASTR  , KC_LPRN  , KC_RPRN  ,
+    KC_TRNS   , KC_TRNS , KC_TRNS  , KC_TRNS  , KC_TRNS  ,                            KC_DQUO  , KC_QUOT  , KC_TILD  , KC_CIRC  ,  KC_GRV  ,
+    KC_PIPE   , KC_EQL  , KC_PLUS  , KC_MINS  , KC_UNDS  ,                            KC_LCBR  , KC_RCBR  , KC_LBRC  , KC_RBRC  , KC_BSLS  ,
+    KC_TRNS   , KC_TRNS , KC_TRNS  , KC_TRNS  , KC_TRNS  , KC_TRNS  ,      KC_TRNS  , KC_TRNS  , KC_TRNS  , KC_TRNS  , KC_TRNS  , KC_TRNS
   ),
 
   [3] = LAYOUT_universal(
-    RGB_TOG  , AML_TO   , AML_I50  , AML_D50  , _______  ,                            _______  , _______  , SSNP_HOR , SSNP_VRT , SSNP_FRE ,
-    RGB_MOD  , RGB_HUI  , RGB_SAI  , RGB_VAI  , SCRL_DVI ,                            _______  , _______  , _______  , _______  , _______  ,
-    RGB_RMOD , RGB_HUD  , RGB_SAD  , RGB_VAD  , SCRL_DVD ,                            CPI_D1K  , CPI_D100 , CPI_I100 , CPI_I1K  , KBC_SAVE ,
-    QK_BOOT  , KBC_RST  , _______  , _______  , _______  , _______  ,      _______  , _______  , _______  , _______  , KBC_RST  , QK_BOOT
+    KC_F1    , KC_F2    , KC_F3    , KC_F4    , KC_F5     ,                           KC_WH_U  , KC_WH_D  , KC_BTN4  , KC_BTN5  , KC_CAPS  ,
+    KC_F6    , KC_F7    , KC_F8    , KC_F9    , KC_F10    ,                           KC_VOLU  , KC_BTN1  , KC_BTN1  , KC_BTN2  , KC_BTN3  ,
+    KC_INS   , KC_SCRL  , KC_CAPS  , KC_F11   , KC_F12    ,                           KC_VOLD  , KC_MUTE  , KC_MPRV  , KC_MNXT  , KC_MPLY  ,
+    KC_TRNS  , KC_TRNS  , KC_TRNS  , KC_TRNS  , KC_TRNS   , KC_TRNS  ,     KC_TRNS  , KC_TRNS  , KC_TRNS  , KC_TRNS  , KC_TRNS  , KC_TRNS
   ),
 };
 // clang-format on
 
 layer_state_t layer_state_set_user(layer_state_t state) {
-    // Auto enable scroll mode when the highest layer is 3
-    keyball_set_scroll_mode(get_highest_layer(state) == 3);
+    // Auto enable scroll mode when the highest layer is 1
+    keyball_set_scroll_mode(get_highest_layer(state) == 1);
     return state;
+}
+
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LGUI_T(KC_A):
+            return TAPPING_TERM + 200;
+        case LALT_T(KC_R):
+            return TAPPING_TERM + 200;
+        case LCTL_T(KC_S):
+            return TAPPING_TERM + 200;
+        case LSFT_T(KC_T):
+            return TAPPING_TERM + 200;
+        case RSFT_T(KC_N):
+            return TAPPING_TERM + 200;
+        case RCTL_T(KC_E):
+            return TAPPING_TERM + 200;
+        case LALT_T(KC_I):
+            return TAPPING_TERM + 200;
+        case RGUI_T(KC_O):
+            return TAPPING_TERM + 200;
+        default:
+            return TAPPING_TERM;
+    }
+}
+
+bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LT(1,KC_TAB):
+            // Immediately select the hold action when another key is pressed.
+            return true;
+        case LT(2,KC_ENT):
+            return true;
+        case LT(3,KC_DEL):
+            return true;
+        default:
+            // Do not select the hold action when another key is pressed.
+            return false;
+    }
 }
 
 #ifdef OLED_ENABLE
