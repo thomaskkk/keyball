@@ -46,3 +46,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define QUICK_TAP_TERM 120
 // Allow preffered hold per key
 #define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
+// Both shift turn on caps word
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
