@@ -62,21 +62,21 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LGUI_T(KC_A):
-            return TAPPING_TERM + 200;
+            return TAPPING_TERM + 100;
         case LALT_T(KC_R):
-            return TAPPING_TERM + 200;
+            return TAPPING_TERM + 100;
         case LCTL_T(KC_S):
-            return TAPPING_TERM + 200;
+            return TAPPING_TERM + 100;
         case LSFT_T(KC_T):
-            return TAPPING_TERM + 200;
+            return TAPPING_TERM + 100;
         case RSFT_T(KC_N):
-            return TAPPING_TERM + 200;
+            return TAPPING_TERM + 100;
         case RCTL_T(KC_E):
-            return TAPPING_TERM + 200;
+            return TAPPING_TERM + 100;
         case LALT_T(KC_I):
-            return TAPPING_TERM + 200;
+            return TAPPING_TERM + 100;
         case RGUI_T(KC_O):
-            return TAPPING_TERM + 200;
+            return TAPPING_TERM + 100;
         default:
             return TAPPING_TERM;
     }
